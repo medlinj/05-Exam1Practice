@@ -229,13 +229,17 @@ def problem3b(m, point1):
     # ------------------------------------------------------------------
 
     window = rg.RoseWindow(400, 650)
+    total_sum = 0
     for k in range(m):
         point1_y = point1.y + 60 * k
         point1_x = point1.x
         point = rg.Point(point1_x, point1_y)
-        problem3a(window, point, 3 + 2 * k)
+        x = problem3a(window, point, 3 + 2 * k)
+        total_sum = total_sum + x
+
     window.render()
     window.close_on_mouse_click()
+    return total_sum
 
     # I do not know how to accumulate the line thicknesses
 
