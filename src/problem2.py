@@ -120,6 +120,7 @@ def problem2a(circle, rectangle, window):
     point_1 = rectangle.get_upper_right_corner()
     point_2 = rectangle.get_lower_left_corner()
     line = rg.Line(point_1, point_2)
+    line.arrow = 'last'
 
     line.attach_to(window)
     window.render()
